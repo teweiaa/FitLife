@@ -14,8 +14,8 @@ user_height = float(input("Write down your height in m (example: 1.62): "))
 # 3. Логика расчетов (Функции как "черный ящик": используем арифметику)
 # Формула ИМТ: вес разделить на (рост в квадрате)
 def calculate_bmi(weight, height):
-    bmi = round(weight / (height ** 2), 1)  # расчёт индекса массы тела
-    return bmi
+    """Calculate BMI from weight and height."""
+    return round(weight / (height ** 2), 1)  # расчёт индекса массы тела
 
 
 result_bmi = calculate_bmi(user_weight, user_height)
@@ -23,11 +23,11 @@ result_bmi = calculate_bmi(user_weight, user_height)
 
 # Подсчет воды: вес * 30 мл
 def calculate_water_needed(weight):
+    """Calculate recommended water intake based on weight."""
     WATER_PER_KG = 30
     ML_TO_L = 1000
     water_ml = weight * WATER_PER_KG
-    water_l = water_ml / ML_TO_L
-    return water_l
+    return water_ml / ML_TO_L
 
 
 result_water = calculate_water_needed(user_weight)
