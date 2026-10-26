@@ -36,6 +36,9 @@ result_water = calculate_water_needed(user_weight)
 # 4. Вывод красивого результата
 print(f"Report for user: {user_name} ({user_age} years old)")
 print(f"Your Body Mass Index (BMI) is: {result_bmi}")
-print(f"Recommended water amount for weight {user_weight} kg: {result_water:.1f} l per day")
+print(
+    f"Recommended water amount for weight "
+    f"{user_weight} kg: {result_water:.1f} l per day"
+)
 print()
 print("The calculation is complete. Stay healthy!")
