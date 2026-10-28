@@ -1,9 +1,23 @@
 # Проект FitLife - MVP версия 1.0
 
+# Константы
+WATER_PER_KG = 30
+ML_TO_L = 1000
+
 
 # 1. Знакомство
-user_name = input("Hello! Let's start with your name: ")
-user_age = int(input("How old are you?: "))
+user_name = input("Hello! Let's start with your name: ").strip()
+
+
+while True:
+    try:
+        user_age = int(input("How old are you?: "))
+        if user_age <= 0:
+            print("Please enter a valid age greater than 0.")
+            continue
+        break
+    except ValueError:
+        print("Invalid input. Please enter a number for your age.")
 
 
 # 2. Сбор данных
@@ -24,10 +38,7 @@ result_bmi = calculate_bmi(user_weight, user_height)
 # Подсчет воды: вес * 30 мл
 def calculate_water_needed(weight):
     """Calculate recommended water intake based on weight."""
-    WATER_PER_KG = 30
-    ML_TO_L = 1000
-    water_ml = weight * WATER_PER_KG
-    return water_ml / ML_TO_L
+    return weight * WATER_PER_KG / ML_TO_L  # water in liters
 
 
 result_water = calculate_water_needed(user_weight)
