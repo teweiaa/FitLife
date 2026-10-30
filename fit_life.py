@@ -39,7 +39,7 @@ while True:
 # 3. Сбор данных роста
 while True:
     try:
-        user_height = float(input("Write down your height in m (e.g.: 1.62): "))
+        user_height = float(input("Write down height in m (e.g.: 1.62): "))
         if MIN_HEIGHT <= user_height > MAX_HEIGHT:
             print(
                 f"Please enter a valid height greater than {MIN_HEIGHT} m. "
