@@ -27,10 +27,10 @@ while True:
 # 2. Сбор данных веса
 while True:
     try:
-        user_weight = float(input("Write down your weight in kg (example: 81.2): "))
+        user_weight = float(input("Write down weight in kg (e.g.: 81.2): "))
         if user_weight <= MIN_WEIGHT:
             print(f"Please enter a valid weight greater than {MIN_WEIGHT} kg.")
-            continue   
+            continue
         break
     except ValueError:
         print("Invalid input. Please enter numbers for weight and height.")
@@ -39,7 +39,7 @@ while True:
 # 3. Сбор данных роста
 while True:
     try:
-        user_height = float(input("Write down your height in m (example: 1.62): "))
+        user_height = float(input("Write down your height in m (e.g.: 1.62): "))
         if MIN_HEIGHT <= user_height > MAX_HEIGHT:
             print(
                 f"Please enter a valid height greater than {MIN_HEIGHT} m. "
